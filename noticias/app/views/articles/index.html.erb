@@ -1,5 +1,5 @@
 <h1>Lista de Noticias en vivo</h1>
-<% @articles.each do |article|%>
+<% @articles.last(10).reverse_each do |article|%>
 	<h2><%=	article.title %></h2>
 	<h3>
 		<%= article.subhead %>
@@ -8,10 +8,10 @@
 		<%= article.body %>
 	</div>
 	<div>
-		<%= article.created_at%>
+		Fecha de publicación: <%= article.created_at%>
 	</div>
 	<div>
-		<%= article.comments.count%>
+		Numero de comentarios: <%= article.comments.count%>
 	</div>
 	<div>
 		<%= link_to "Ver", article_path(article)%>
