@@ -1,0 +1,19 @@
+<%= form_for(@article) do |f| %>
+	<% @article.errors.full_messages.each do |message| %>
+		<div class="be-red white top-space">
+			* <%=message%>
+		</div>
+	<%end%>
+	<div class="field">
+		<%= f.text_field :title, placeholder: "Titulo", class:"form_control" %>
+	</div>
+	<div class="field">
+		<%= f.text_area :subhead, placeholder: "Bajada", class:"form_control", style:"height:100px; width:100%;"%>
+	</div>
+	<div class="field">
+		<%= f.text_area :body, placeholder: "Escribe el cuerpo de la noticia", class:"form_control", style:"height:250px; width:100%"%>
+	</div>
+	<div>
+		<%= f.submit "Guardar"%>
+	</div>
+<%end%>	
