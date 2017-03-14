@@ -1,5 +1,6 @@
+<h1>Lista de Noticias en vivo</h1>
 <% @articles.each do |article|%>
-	<h1><%=	article.title %></h1> - <%= link_to "Eliminar", article, method: :delete %>
+	<h2><%=	article.title %></h2>
 	<div>
 		<%= article.subhead %>
 	</div>

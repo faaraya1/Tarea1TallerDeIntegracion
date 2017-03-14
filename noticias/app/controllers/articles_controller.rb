@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 	def show
 		@article = Article.find(params[:id])
 	end
-	#GET /articles/show
+	#GET /articles/new
 	def new
 		@article = Article.new
 	end
@@ -38,6 +38,10 @@ class ArticlesController < ApplicationController
 		else
 			 render :edit
 		end	
+	end
+
+	def administrate
+		@articles = Article.all
 	end
 
 	private

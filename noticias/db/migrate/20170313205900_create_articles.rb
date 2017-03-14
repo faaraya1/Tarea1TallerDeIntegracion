@@ -4,7 +4,6 @@ class CreateArticles < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :subhead
       t.text :body
-      t.integer :comments_count
 
       t.timestamps
     end

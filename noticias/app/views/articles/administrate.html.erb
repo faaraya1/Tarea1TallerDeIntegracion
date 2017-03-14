@@ -1,0 +1,18 @@
+<h1>Administrar Noticias</h1>
+<%= link_to "Crear nueva noticia", new_article_path()%>
+<table>
+  <tr>
+    <th>Noticia</th>
+    <th>Fecha de publicación</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.created_at %></td>
+      <td><%= link_to 'Editar', edit_article_path(article) %></td>
+      <td><%= link_to 'Eliminar',  article, method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
