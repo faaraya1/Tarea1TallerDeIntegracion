@@ -1,9 +1,13 @@
 <h1><%=	@article.title %></h1>
-<div>
+<h2>
 	<%= @article.subhead %>
-</div>
+</h2>
 <div>
 	<%= @article.body %>
+</div>
+<br>
+<div>
+    Fecha de publicación: <%= @article.created_at%>
 </div>
 
 <h3>Comentarios</h3>
