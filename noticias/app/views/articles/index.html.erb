@@ -1,10 +1,19 @@
 <h1>Lista de Noticias en vivo</h1>
 <% @articles.each do |article|%>
 	<h2><%=	article.title %></h2>
-	<div>
+	<h3>
 		<%= article.subhead %>
-	</div>
+	</h3>
 	<div>
 		<%= article.body %>
+	</div>
+	<div>
+		<%= article.created_at%>
+	</div>
+	<div>
+		<%= article.comments.count%>
+	</div>
+	<div>
+		<%= link_to "Ver", article_path(article)%>
 	</div>
 <%end%>
