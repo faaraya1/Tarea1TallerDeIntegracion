@@ -7,8 +7,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+  	<header>
+  		<nav class="be-red white">
+  			<ul class="no-list row center-xs">
+  				<li class="col-md">
+  					<%= link_to "Ver Sitio", root_path %>
+  				</li>
+  				<li class="col-md">
+  					<%= link_to "Administrar Noticias", root_path %>
+  				</li>  				
+  			</ul>  			
+  		</nav>
+  	</header>
     <%= yield %>
   </body>
 </html>
