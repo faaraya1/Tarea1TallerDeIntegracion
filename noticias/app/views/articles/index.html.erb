@@ -5,14 +5,17 @@
 		<%= article.subhead %>
 	</h3>
 	<div>
-		<%= article.body %>
+		<%= article.body_truncated %>
 	</div>
+	<br>
 	<div>
 		Fecha de publicación: <%= article.created_at%>
 	</div>
+	<br>
 	<div>
 		Numero de comentarios: <%= article.comments.count%>
 	</div>
+	<br>
 	<div>
 		<%= link_to "Ver", article_path(article)%>
 	</div>
